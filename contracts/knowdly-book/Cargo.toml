@@ -1,0 +1,32 @@
+# Cargo.toml for the Knowdly Book smart contract
+# This defines the package metadata and dependencies for our Soroban contract
+
+[package]
+# the name of our contract package
+name = "knowdly-book"
+
+# version of this contract
+version = "0.1.0"
+
+# we are using the 2021 Rust edition
+edition = "2021"
+
+# do not publish this to crates.io
+publish = false
+
+[lib]
+# cdylib produces a dynamic library that compiles to WebAssembly
+# lib allows normal Rust testing
+crate-type = ["lib", "cdylib"]
+
+# disable doc tests — not needed for smart contracts
+doctest = false
+
+[dependencies]
+# soroban-sdk gives us all the tools to write Stellar smart contracts
+# workspace = true means it uses the version defined in the root Cargo.toml
+soroban-sdk = { workspace = true }
+
+[dev-dependencies]
+# testutils feature adds testing helpers so we can write unit tests
+soroban-sdk = { workspace = true, features = ["testutils"] }
