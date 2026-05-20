@@ -47,7 +47,7 @@
                   "u32": 500
                 },
                 {
-                  "string": "arweave-tx-id-123"
+                  "string": "pending_test"
                 },
                 {
                   "string": "Introduction to Blockchain"
@@ -104,7 +104,7 @@
                       "symbol": "arweave_tx_id"
                     },
                     "val": {
-                      "string": "arweave-tx-id-123"
+                      "string": "pending_test"
                     }
                   },
                   {
